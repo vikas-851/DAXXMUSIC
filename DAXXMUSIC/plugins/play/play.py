@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from VIPMUSIC import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from VIPMUSIC.core.call import VIP
-from VIPMUSIC.utils import seconds_to_min, time_to_seconds
-from VIPMUSIC.utils.channelplay import get_channeplayCB
-from VIPMUSIC.utils.decorators.language import languageCB
-from VIPMUSIC.utils.decorators.play import PlayWrapper
-from VIPMUSIC.utils.formatters import formats
-from VIPMUSIC.utils.inline import (
+from DAXXMUSIC import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from DAXXMUSIC.core.call import VIP
+from DAXXMUSIC.utils import seconds_to_min, time_to_seconds
+from DAXXMUSIC.utils.channelplay import get_channeplayCB
+from DAXXMUSIC.utils.decorators.language import languageCB
+from DAXXMUSIC.utils.decorators.play import PlayWrapper
+from DAXXMUSIC.utils.formatters import formats
+from DAXXMUSIC.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from VIPMUSIC.utils.logger import play_logs
-from VIPMUSIC.utils.stream.stream import stream
+from DAXXMUSIC.utils.logger import play_logs
+from DAXXMUSIC.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
