@@ -80,9 +80,8 @@ async def play_commnd(
                 "link": message_link,
                 "path": file_path,
                 "dur": dur,
-            }
-
-try:
+}
+            try:
                 await stream(
                     _,
                     mystic,
@@ -187,8 +186,7 @@ try:
                     return await mystic.edit_text(_["play_3"])
                 streamtype = "youtube"
                 img = details["thumb"]
-
-cap = _["play_10"].format(details["title"], details["duration_min"])
+                cap = _["play_10"].format(details["title"], details["duration_min"])
             elif "playlist" in url:
                 try:
                     details, plist_id = await Spotify.playlist(url)
@@ -285,8 +283,7 @@ cap = _["play_10"].format(details["title"], details["duration_min"])
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
                     text=_["play_17"],
-
-)
+                )
             except Exception as e:
                 return await mystic.edit_text(_["general_2"].format(type(e).name))
             await mystic.edit_text(_["str_2"])
@@ -400,8 +397,7 @@ cap = _["play_10"].format(details["title"], details["duration_min"])
                 await mystic.delete()
                 await message.reply_photo(
                     photo=details["thumb"],
-
-caption=_["play_10"].format(
+                caption=_["play_10"].format(
                         details["title"].title(),
                         details["duration_min"],
                     ),
@@ -503,8 +499,7 @@ async def DAXXmous_check(client, CallbackQuery):
         )
     except:
         pass
-
-@app.on_callback_query(filtersx("DAXXPlaylists") & ~BANNED_USERS)
+        @app.on_callback_query(filtersx("DAXXPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
@@ -589,8 +584,7 @@ async def play_playlists_command(client, CallbackQuery, _):
         err = e if ex_type == "AssistantErr" else _["general_2"].format(ex_type)
         return await mystic.edit_text(err)
     return await mystic.delete()
-
-@app.on_callback_query(filters.regex("slider") & ~BANNED_USERS)
+    @app.on_callback_query(filters.regex("slider") & ~BANNED_USERS)
 @languageCB
 async def slider_queries(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
@@ -651,4 +645,4 @@ async def slider_queries(client, CallbackQuery, _):
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
-)
+    )
