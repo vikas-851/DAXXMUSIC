@@ -1,7 +1,7 @@
 import os
 import requests
 from random import randint
-from VIPMUSIC.utils.database import (
+from DAXXMUSIC.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -14,24 +14,24 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
                             InlineKeyboardMarkup, Message)
-from VIPMUSIC.utils import close_markup
+from DAXXMUSIC.utils import close_markup
 from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from VIPMUSIC import Carbon, YouTube, app
 from VIPMUSIC.utils.decorators.language import language, languageCB
 from VIPMUSIC.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from VIPMUSIC.utils.pastebin import VIPBin
+from DAXXMUSIC.utils.pastebin import VIPBin
 import time
 import yt_dlp
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
 from youtubesearchpython import SearchVideos
 
-from VIPMUSIC.utils.stream.stream import stream
+from DAXXMUSIC.utils.stream.stream import stream
 from typing import Dict, List, Union
 
-from VIPMUSIC.core.mongo import mongodb
+from DAXXMUSIC.core.mongo import mongodb
 
 playlistdb = mongodb.playlist
 playlist = []
