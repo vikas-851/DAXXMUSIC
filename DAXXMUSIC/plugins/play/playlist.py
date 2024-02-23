@@ -21,7 +21,7 @@ from DAXXMUSIC.utils.decorators.language import language, languageCB
 from DAXXMUSIC.utils.inline.playlist import (botplaylist_markup,
                                               get_playlist_markup,
                                               warning_markup)
-from DAXXMUSIC.utils.pastebin import DAXXBin as VIPbin
+from DAXXMUSIC.utils.pastebin import DAXXBin as VIPBin
 import time
 import yt_dlp
 from youtube_search import YoutubeSearch
