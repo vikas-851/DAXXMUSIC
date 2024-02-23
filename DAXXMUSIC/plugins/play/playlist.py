@@ -338,7 +338,7 @@ async def add_playlist(client, message: Message, _):
             return await message.reply_text(str(e))
             pass
     else:
-        from VIPMUSIC import YouTube
+        from DAXXMUSIC import YouTube
         # Add a specific song by name
         query = " ".join(message.command[1:])
         print(query)
@@ -560,7 +560,7 @@ async def add_playlist(client, CallbackQuery, _):
 @app.on_callback_query(filters.regex("del_playlist") & ~BANNED_USERS)
 @languageCB
 async def del_plist(client, CallbackQuery, _):
-    from VIPMUSIC import YouTube
+    from DAXXMUSIC import YouTube
     callback_data = CallbackQuery.data.strip()
     videoid = callback_data.split(None, 1)[1]
     user_id = CallbackQuery.from_user.id
@@ -593,7 +593,7 @@ async def del_plist(client, CallbackQuery, _):
 )
 @languageCB
 async def del_whole_playlist(client, CallbackQuery, _):
-    from VIPMUSIC import YouTube
+    from DAXXMUSIC import YouTube
     _playlist = await get_playlist_names(CallbackQuery.from_user.id)
     for x in _playlist:
         await delete_playlist(CallbackQuery.from_user.id, x)
@@ -620,7 +620,7 @@ async def get_playlist_playmode_(client, CallbackQuery, _):
 )
 @languageCB
 async def delete_warning_message(client, CallbackQuery, _):
-    from VIPMUSIC import YouTube
+    from DAXXMUSIC import YouTube
     try:
         await CallbackQuery.answer()
     except:
@@ -634,7 +634,7 @@ async def delete_warning_message(client, CallbackQuery, _):
 @app.on_callback_query(filters.regex("home_play") & ~BANNED_USERS)
 @languageCB
 async def home_play_(client, CallbackQuery, _):
-    from VIPMUSIC import YouTube
+    from DAXXMUSIC import YouTube
     try:
         await CallbackQuery.answer()
     except:
@@ -650,7 +650,7 @@ async def home_play_(client, CallbackQuery, _):
 )
 @languageCB
 async def del_back_playlist(client, CallbackQuery, _):
-    from VIPMUSIC import YouTube
+    from DAXXMUSIC import YouTube
     user_id = CallbackQuery.from_user.id
     _playlist = await get_playlist_names(user_id)
     if _playlist:
