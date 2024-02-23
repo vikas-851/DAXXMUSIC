@@ -23,6 +23,8 @@ BOT_NAME = getenv("BOT_NAME" , "HINATA")
 ASSUSERNAME = getenv("ASSUSERNAME" , "tanjiro_x_coder")
 # ---------------------------------------------------------
 
+# Maximum Limit Allowed for users to save playlists on bot's server
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
