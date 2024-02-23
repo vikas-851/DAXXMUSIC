@@ -15,7 +15,7 @@ from pyrogram import filters
 from pyrogram.types import (InlineKeyboardButton, CallbackQuery,
                             InlineKeyboardMarkup, Message)
 from DAXXMUSIC.utils import close_markup
-from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT as DURATION_LIMIT_MIN
+from config import BANNED_USERS, SERVER_PLAYLIST_LIMIT
 from DAXXMUSIC import Carbon, app
 from DAXXMUSIC.utils.decorators.language import language, languageCB
 from DAXXMUSIC.utils.inline.playlist import (botplaylist_markup,
