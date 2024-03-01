@@ -1,10 +1,9 @@
 import random
 from DAXXMUSIC import app, userbot
 from DAXXMUSIC.misc import SUDOERS
-from pyrogram import * 
-from pyrogram.types import *
 from DAXXMUSIC.utils.daxx_ban import admin_filter
 from DAXXMUSIC.misc import SUDOERS
+from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 
 @app.on_chat_member_updated(filters.group, group=-5)
 async def greet_new_member(_, member: ChatMemberUpdated):
@@ -34,10 +33,10 @@ async def greet_new_member(_, member: ChatMemberUpdated):
                     can_manage_video_chats=True,
                        )
                      )
-            await app.send_message(chat_id, f"**ᴡᴇʟᴄᴏᴍᴇ,** {user.mention} **ʙᴏss😊**")
+            await app.send_message(chat_id, f"ᴡᴇʟᴄᴏᴍᴇ, {user.mention} ʙᴏss😊")
         except Exception as e:
             LOGGER.error(f"ChatAdminRequired: {e}")
-            await app.send_message(chat_id, f"**ᴡᴇʟᴄᴏᴍᴇ ʙᴏss🙂**")
+            await app.send_message(chat_id, f"ᴡᴇʟᴄᴏᴍᴇ ʙᴏss🙂")
             return
         except Exception as e:
             LOGGER.error(f"Error promoting member: {e}")            
