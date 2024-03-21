@@ -22,7 +22,14 @@ BOT_NAME = getenv("BOT_NAME" , "HINATA")
 # ---------------------------------------------------------
 ASSUSERNAME = getenv("ASSUSERNAME" , "tanjiro_x_coder")
 # ---------------------------------------------------------
-
+UPSTREAM_REPO = getenv(
+    "UPSTREAM_REPO",
+    "https://github.com/VG-TEAM/DAXXMUSIC",
+)
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
+GIT_TOKEN = getenv(
+    "GIT_TOKEN", None
+) 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
