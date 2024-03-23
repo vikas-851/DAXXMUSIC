@@ -2,7 +2,7 @@
 from pyrogram import *
 from pyrogram.types import *
 from DAXXMUSIC.utils.daxx_ban import admin_filter
-
+from DAXXMUSIC import app 
 # Define the '/title' command handler
 @app.on_message(filters.command("title") & admin_filter)
 async def set_title_command(app: Client, message: Message):
