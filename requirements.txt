@@ -1,3 +1,5 @@
+numpy==1.26.4
+opencv-python
 aiofiles
 bard
 SpeechRecognition
@@ -16,7 +18,6 @@ Faker
 pydub
 pycountry
 heroku3
-pytube
 apscheduler
 motor 
 numpy
