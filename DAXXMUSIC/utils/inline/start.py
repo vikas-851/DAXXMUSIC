@@ -35,21 +35,3 @@ def private_panel(_):
     ]
     return buttons
 
-@app.on_callback_query(filters.regex("waifu"))
-async def waifu_callback(client: Client, callback_query: CallbackQuery):
-
-    await callback_query.answer()
-
-    # Send the help information for the "waifu" functionality
-    help_text = """
-    /guess: To Guess character (only works in group)
-    /fav: Add Your fav
-    /trade: To trade Characters
-    /gift: Give any Character from Your Collection to another user.. (only works in groups)
-    /collection: To see Your Collection
-    /topgroups: See Top Groups.. Ppl Guesses Most in that Groups
-    /top: Too See Top Users
-    /ctop: Your ChatTop
-    /changetime: Change Character appear time (only works in Groups)
-    """
-    await callback_query.message.reply_text(help_text)
