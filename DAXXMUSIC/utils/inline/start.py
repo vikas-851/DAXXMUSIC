@@ -1,3 +1,26 @@
+from pyrogram import Client
+from pyrogram.types import CallbackQuery
+
+# Define the callback query handler for "waifu"
+@app.on_callback_query(filters.regex("waifu"))
+async def waifu_callback(client: Client, callback_query: CallbackQuery):
+    # Respond to the callback query
+    await callback_query.answer()
+
+    # Send the help information for the "waifu" functionality
+    help_text = """
+    /guess: To Guess character (only works in group)
+    /fav: Add Your fav
+    /trade: To trade Characters
+    /gift: Give any Character from Your Collection to another user.. (only works in groups)
+    /collection: To see Your Collection
+    /topgroups: See Top Groups.. Ppl Guesses Most in that Groups
+    /top: Too See Top Users
+    /ctop: Your ChatTop
+    /changetime: Change Character appear time (only works in Groups)
+    """
+    await callback_query.message.reply_text(help_text)
+
 from pyrogram.types import InlineKeyboardButton
 
 import config
@@ -30,8 +53,9 @@ def private_panel(_):
         ],
         [
             InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper"),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_6"], callback_data="waifu"),
      
         ],
     ]
     return buttons
+
