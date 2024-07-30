@@ -9,23 +9,22 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("25395782"))
+API_HASH = getenv("3c0f6066a07142d664690cfd34447450")
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("7262095494:AAFclA3a3SDbyFkedrnQcg5g2lZF87vTUI8")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","iam_daxx")
+OWNER_USERNAME = getenv("OWNER_USERNAME","sung_jinwo4")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "Hinata_X_Music_robot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "soulsupremebot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "HINATA")
+BOT_NAME = getenv("BOT_NAME" , "𝐒𝐎𝐔𝐋 𝐒𝐔𝐏𝐑𝐄𝐌𝐄『 魂 』")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "tanjiro_x_coder")
+ASSUSERNAME = getenv("ASSUSERNAME" , "soulmusicassistant")
 # ---------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/vikas-851/DAXXMUSIC",
-)
+    "https://github.com/sungjinw04/DAXXMUSIC"
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
@@ -35,7 +34,7 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("mongodb+srv://sungjinwoo:sungjinwoo@cluster0.adqxlik.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", None)
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -44,10 +43,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1001919135283))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002168263778))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 6664582540))
+OWNER_ID = int(getenv("OWNER_ID", 1886390680))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -70,8 +69,8 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/qkwkwwkjwjjwh")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/qkwkwwkjwjjwh")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SOULS_BORNX")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+H85eTC_5eMg4YTQ1")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
