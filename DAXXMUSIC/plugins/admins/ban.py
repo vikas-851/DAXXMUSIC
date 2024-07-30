@@ -39,14 +39,14 @@ async def ban_user(user_id, first_name, admin_id, admin_name, chat_id, reason, t
     try:
         await app.ban_chat_member(chat_id, user_id)
     except ChatAdminRequired:
-        msg_text = "Ban rights? Nah, I'm just here for the digital high-fives 🙌\nGive me ban rights! 😡🥺"
+        msg_text = "Ban rights? Nahi hai lawde  🙌\nGive me ban rights! 😡🥺"
         return msg_text, False
     except UserAdminInvalid:
         msg_text = "I wont ban an admin bruh!!"
         return msg_text, False
     except Exception as e:
         if user_id == 6711389550:
-            msg_text = "why should i ban myself? sorry but I'm not stupid like you"
+            msg_text = "why should i ban myself? hum amar h par chutiya nhi "
             return msg_text, False
         
         msg_text = f"opps!!\n{e}"
@@ -56,7 +56,7 @@ async def ban_user(user_id, first_name, admin_id, admin_name, chat_id, reason, t
     admin_mention = mention(admin_id, admin_name)
 
     msg_text += f""
-    msg_text += f"{user_mention} was banned by {admin_mention}\n"
+    msg_text += f"{user_mention} was fucked by {admin_mention}\n"
     
     if reason:
         msg_text += f"Reason: `{reason}`\n"
@@ -70,7 +70,7 @@ async def unban_user(user_id, first_name, admin_id, admin_name, chat_id):
     try:
         await app.unban_chat_member(chat_id, user_id)
     except ChatAdminRequired:
-        msg_text = "Ban rights? Nah, I'm just here for the digital high-fives 🙌\nGive me ban rights! 😡🥺"
+        msg_text = "Ban rights? Nahi hai lawde 🙌\nGive me ban rights! 😡🥺"
         return msg_text
     except Exception as e:
         msg_text = f"opps!!\n{e}"
@@ -92,14 +92,14 @@ async def mute_user(user_id, first_name, admin_id, admin_name, chat_id, reason, 
         else:
             await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
     except ChatAdminRequired:
-        msg_text = "Mute rights? Nah, I'm just here for the digital high-fives 🙌\nGive me mute rights! 😡🥺"
+        msg_text = "Mute rights? Nah,rights dila lawde 🙌\nGive me mute rights! 😡🥺"
         return msg_text, False
     except UserAdminInvalid:
         msg_text = "I wont mute an admin bruh!!"
         return msg_text, False
     except Exception as e:
         if user_id == 6664582540:
-            msg_text = "why should i mute myself? sorry but I'm not stupid like you"
+            msg_text = "why should i mute myself? tu shant reh bkl"
             return msg_text, False
         
         msg_text = f"opps!!\n{e}"
@@ -108,7 +108,7 @@ async def mute_user(user_id, first_name, admin_id, admin_name, chat_id, reason, 
     user_mention = mention(user_id, first_name)
     admin_mention = mention(admin_id, admin_name)
 
-    msg_text += f"{user_mention} was muted by {admin_mention}\n"
+    msg_text += f"{user_mention} was chocked by {admin_mention}\n"
     
     if reason:
         msg_text += f"Reason: `{reason}`\n"
@@ -133,7 +133,7 @@ async def unmute_user(user_id, first_name, admin_id, admin_name, chat_id):
             )
         )
     except ChatAdminRequired:
-        msg_text = "Mute rights? Nah, I'm just here for the digital high-fives 🙌\nGive me unmute rights! 😡🥺"
+        msg_text = "Mute rights? nhi h,rights dila lawde 🙌\nGive me unmute rights! 😡🥺"
         return msg_text
     except Exception as e:
         msg_text = f"opps!!\n{e}"
@@ -254,7 +254,7 @@ async def mute_command_handler(client, message):
         if member.privileges.can_restrict_members:
             pass
         else:
-            msg_text = "You dont have permission to mute someone"
+            msg_text = "BKL OTAAT ME"
             return await message.reply_text(msg_text)
     else:
         msg_text = "You dont have permission to mute someone"
