@@ -37,14 +37,14 @@ strict_txt = [
 
 
  
-ban = ["ban","boom"]
-unban = ["unban",]
-mute = ["mute","silent","shut"]
-unmute = ["unmute","speak","free"]
-kick = ["kick", "out","nikaal","nikal"]
-promote = ["promote","adminship"]
+ban = ["ban","boom","udade","chodde"]
+unban = ["unban","Wapisaa"]
+mute = ["mute","silent","chup","shutup"]
+unmute = ["unmute","speak","free","bolnede"]
+kick = ["kick", "out","nikaal","nikallwde"]
+promote = ["promote","adminship","admin"]
 fullpromote = ["fullpromote","fulladmin"]
-demote = ["demote","lelo"]
+demote = ["demote","lele"]
 group = ["group"]
 channel = ["channel"]
 
@@ -53,7 +53,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["ina","inata"], prefixes=["h", "H"]) & admin_filter)
+@app.on_message(filters.command(["ung","ungjinwoo"], prefixes=["s", "S"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -71,11 +71,12 @@ async def restriction_app(app :app, message):
                     await message.reply(random.choice(strict_txt))          
                 else:
                     await app.ban_chat_member(chat_id, user_id)
-                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    await message.reply("OK, Jnl maa chuda, malik ko pareshan karega !")
                     
         for unbanned in data:
             print(f"present {unbanned}")
             if unbanned in unban:
+               if user_id in SUDOERS:
                 await app.unban_chat_member(chat_id, user_id)
                 await message.reply(f"Ok, aap bolte hai to unban kar diya") 
                 
@@ -88,7 +89,7 @@ async def restriction_app(app :app, message):
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
-                    await message.reply("get lost! bhga diya bhosdi wale ko") 
+                    await message.reply("get lost! bhga diya bkl sasti rand ko") 
                     
         for muted in data:
             print(f"present {muted}") 
@@ -99,11 +100,12 @@ async def restriction_app(app :app, message):
                 else:
                     permissions = ChatPermissions(can_send_messages=False)
                     await message.chat.restrict_member(user_id, permissions)
-                    await message.reply(f"muted successfully! Disgusting people.") 
+                    await message.reply(f"muted successfully! Chup mdc .") 
                     
         for unmuted in data:
             print(f"present {unmuted}")            
             if unmuted in unmute:
+               if user_id in SUDOERS:
                 permissions = ChatPermissions(can_send_messages=True)
                 await message.chat.restrict_member(user_id, permissions)
                 await message.reply(f"Huh, OK, sir!")   
@@ -112,6 +114,7 @@ async def restriction_app(app :app, message):
         for promoted in data:
             print(f"present {promoted}")            
             if promoted in promote:
+               if user_id in SUDOERS:
                 await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                     can_change_info=False,
                     can_invite_users=True,
@@ -128,6 +131,7 @@ async def restriction_app(app :app, message):
         for demoted in data:
             print(f"present {demoted}")            
             if demoted in demote:
+               if user_id in SUDOERS:
                 await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                     can_change_info=False,
                     can_invite_users=False,
@@ -146,6 +150,7 @@ async def restriction_app(app :app, message):
     for fullpromoted in data:
         print(f"present {fullpromoted}")            
         if fullpromoted in fullpromote:
+           if user_id in SUDOERS:
             await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                 can_change_info=True,
                 can_invite_users=True,
