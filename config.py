@@ -35,7 +35,7 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("mongodb+srv://history:history@cluster0.hdcm5eu.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("mongodb+srv://levi:levi@cluster0.5nctdgf.mongodb.net/?retryWrites=true&w=majority")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
