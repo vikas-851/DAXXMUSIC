@@ -22,10 +22,7 @@ BOT_NAME = getenv("BOT_NAME" , "𝐒𝐎𝐔𝐋 𝐒𝐔𝐏𝐑𝐄𝐌𝐄『
 # ---------------------------------------------------------
 ASSUSERNAME = getenv("ASSUSERNAME" , "soulmusicassistant")
 # ---------------------------------------------------------
-UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO",
-    "https://github.com",
-)
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com",)
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
