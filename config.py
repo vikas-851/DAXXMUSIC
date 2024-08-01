@@ -9,10 +9,11 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = 25395782
-API_HASH = getenv("3c0f6066a07142d664690cfd34447450")
-# ------------------------------------------------------
-BOT_TOKEN = getenv("7262095494:AAFclA3a3SDbyFkedrnQcg5g2lZF87vTUI8")
+API_ID = int(getenv("API_ID", "25064357"))
+API_HASH = getenv("API_HASH", "cda9f1b3f9da4c0c93d1f5c23ccb19e2")
+
+# Get your token from @BotFather on Telegram.
+BOT_TOKEN = getenv("BOT_TOKEN", "7262095494:AAFclA3a3SDbyFkedrnQcg5g2lZF87vTUI8")
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","sung_jinwo4")
 # --------------------------------------------------------
