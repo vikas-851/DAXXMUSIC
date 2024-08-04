@@ -6,37 +6,30 @@ from pyrogram import *
 from pyrogram.types import *
 from DAXXMUSIC.utils.daxx_ban import admin_filter
 
-
-
-
-
-
 Yumikoo_text = [
-"hey please don't disturb me.",
-"who are you",    
-"aap kon ho",
-"aap mere owner to nhi lgte ",
-"hey tum mera name kyu le rhe ho meko sone do",
-"ha bolo kya kaam hai ",
-"dekho abhi mai busy hu ",
-"hey i am busy",
-"aapko smj nhi aata kya ",
-"leave me alone",
-"dude what happend",    
+    "hey please don't disturb me.",
+    "who are you",    
+    "aap kon ho",
+    "aap mere owner to nhi lgte ",
+    "hey tum mera name kyu le rhe ho meko sone do",
+    "ha bolo kya kaam hai ",
+    "dekho abhi mai busy hu ",
+    "hey i am busy",
+    "aapko smj nhi aata kya ",
+    "leave me alone",
+    "dude what happend",    
 ]
 
 strict_txt = [
-"i can't restrict against my besties",
-"are you serious i am not restrict to my friends",
-"fuck you bsdk k mai apne dosto ko kyu kru",
-"hey stupid admin, stay in your limits ", 
-"ha ye phele krlo maar lo ek dusre ki gwaand ban jao lgbtq wale",  
-"i can't hi is my closest friend",
-"i love him please don't restict this user try to usertand "
+    "i can't restrict against my besties",
+    "are you serious i am not restrict to my friends",
+    "fuck you bsdk k mai apne dosto ko kyu kru",
+    "hey stupid admin, stay in your limits ", 
+    "ha ye phele krlo maar lo ek dusre ki gwaand ban jao lgbtq wale",  
+    "i can't hi is my closest friend",
+    "i love him please don't restict this user try to usertand "
 ]
 
-
- 
 ban = ["ban","boom","udade","chodde"]
 unban = ["unban","Wapisaa"]
 mute = ["mute","silent","chup","shutup"]
@@ -48,13 +41,8 @@ demote = ["demote","lele"]
 group = ["group"]
 channel = ["channel"]
 
-
-
-# ========================================= #
-
-
 @app.on_message(filters.command(["ung","ungjinwoo"], prefixes=["s", "S"]) & admin_filter)
-async def restriction_app(app :app, message):
+async def restriction_app(app: app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
     if len(message.text) < 2:
@@ -85,7 +73,6 @@ async def restriction_app(app :app, message):
             if kicked in kick:
                 if user_id in SUDOERS:
                     await message.reply(random.choice(strict_txt))
-                
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
@@ -96,7 +83,6 @@ async def restriction_app(app :app, message):
             if muted in mute:
                 if user_id in SUDOERS:
                     await message.reply(random.choice(strict_txt))
-                
                 else:
                     permissions = ChatPermissions(can_send_messages=False)
                     await message.chat.restrict_member(user_id, permissions)
@@ -110,22 +96,20 @@ async def restriction_app(app :app, message):
                     await message.chat.restrict_member(user_id, permissions)
                     await message.reply(f"Huh, OK, sir!")   
 
-
         for promoted in data:
             print(f"present {promoted}")            
             if promoted in promote:
                 if user_id in SUDOERS:
                     await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
-                    can_change_info=False,
-                    can_invite_users=True,
-                    can_delete_messages=True,
-                    can_restrict_members=False,
-                    can_pin_messages=True,
-                    can_promote_members=False,
-                    can_manage_chat=True,
-                    can_manage_video_chats=True,
-                       )
-                     )
+                        can_change_info=False,
+                        can_invite_users=True,
+                        can_delete_messages=True,
+                        can_restrict_members=False,
+                        can_pin_messages=True,
+                        can_promote_members=False,
+                        can_manage_chat=True,
+                        can_manage_video_chats=True,
+                    ))
                 await message.reply("promoted !")
 
         for demoted in data:
@@ -133,33 +117,30 @@ async def restriction_app(app :app, message):
             if demoted in demote:
                 if user_id in SUDOERS:
                     await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
-                    can_change_info=False,
-                    can_invite_users=False,
-                    can_delete_messages=False,
-                    can_restrict_members=False,
-                    can_pin_messages=False,
-                    can_promote_members=False,
-                    can_manage_chat=False,
-                    can_manage_video_chats=False,
-                       )
-                     )
+                        can_change_info=False,
+                        can_invite_users=False,
+                        can_delete_messages=False,
+                        can_restrict_members=False,
+                        can_pin_messages=False,
+                        can_promote_members=False,
+                        can_manage_chat=False,
+                        can_manage_video_chats=False,
+                    ))
                 await message.reply("demoted !")
 
-
-#async def your_function():
-    for fullpromoted in data:
-        print(f"present {fullpromoted}")            
-        if fullpromoted in fullpromote:
-            if user_id in SUDOERS:
-                await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
-                can_change_info=True,
-                can_invite_users=True,
-                can_delete_messages=True,
-                can_restrict_members=True,
-                can_pin_messages=True,
-                can_promote_members=True,
-                can_manage_chat=True,
-                can_manage_video_chats=True,
-               )
-             )
-              await message.reply("fullpromoted !")
+        for fullpromoted in data:
+            print(f"present {fullpromoted}")            
+            if fullpromoted in fullpromote:
+                if user_id in SUDOERS:
+                    await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
+                        can_change_info=True,
+                        can_invite_users=True,
+                        can_delete_messages=True,
+                        can_restrict_members=True,
+                        can_pin_messages=True,
+                        can_promote_members=True,
+                        can_manage_chat=True,
+                        can_manage_video_chats=True,
+                    ))
+                await message.reply("fullpromoted !")
+             
