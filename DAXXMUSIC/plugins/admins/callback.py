@@ -3,7 +3,7 @@ from telegram import CallbackQuery
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from DAXXMUSIC import YouTube, app
+from DAXXMUSIC import YouTube, app, YTB
 from DAXXMUSIC.core.call import DAXX
 from DAXXMUSIC.misc import SUDOERS, db
 from DAXXMUSIC.utils.database import (
@@ -265,7 +265,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 _["call_7"], disable_web_page_preview=True
             )
             try:
-                file_path, direct = await YouTube.download(
+                file_path, direct = await YTB.download(
                     videoid,
                     mystic,
                     videoid=True,
