@@ -3,7 +3,7 @@ from telegram import CallbackQuery
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from DAXXMUSIC import YouTube, app, YTB
+from DAXXMUSIC import YouTube, app
 from DAXXMUSIC.core.call import DAXX
 from DAXXMUSIC.misc import SUDOERS, db
 from DAXXMUSIC.utils.database import (
