@@ -66,3 +66,4 @@ wget
 yt-dlp==2024.8.6
 youtube-search
 youtube-search-python
+uvloop
